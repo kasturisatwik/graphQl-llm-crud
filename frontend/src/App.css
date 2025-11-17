@@ -1,0 +1,137 @@
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.input-section {
+  width: 100%;
+  display: flex;
+  gap: 0;
+  max-width: 800px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #646cff;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  transition: border-color 0.25s;
+}
+
+.input-section input:focus {
+  outline: none;
+  border-color: #535bf2;
+}
+
+.input-section input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.input-section button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 0 8px 8px 0;
+  border: 2px solid #646cff;
+  border-left: none;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-weight: 500;
+}
+
+.input-section button:hover:not(:disabled) {
+  background-color: #535bf2;
+  border-color: #535bf2;
+  transform: translateY(-1px);
+}
+
+.input-section button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.status {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status.fail {
+  background-color: #f44336;
+  color: white;
+}
+
+.response {
+  width: 100%;
+  max-width: 700px;
+  max-height: 500px;
+  background-color: #1a1a1a;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.response pre {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Roboto Mono', 'Consolas', 'Monaco', 'Menlo', monospace;
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.error {
+  width: 100%;
+  max-width: 700px;
+  background-color: #f44336;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: light) {
+  .input-section input {
+    background-color: #ffffff;
+    color: #213547;
+    border-color: #646cff;
+  }
+
+  .response {
+    background-color: #f9f9f9;
+    border-color: #646cff;
+  }
+
+  .response pre {
+    color: #213547;
+  }
+}
